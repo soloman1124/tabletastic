@@ -42,12 +42,11 @@ RSpec::Core::RakeTask.new(:rcov) do |spec|
 end
 
 
-require 'rake/rdoctask'
-Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
+require 'rdoc/task'
 
-  rdoc.rdoc_dir = 'rdoc'
+RDoc::Task.new do |rdoc|
+  version = File.exist?('VERSION') ? File.read('VERSION') : ""
   rdoc.title = "Tabletastic #{version}"
-  rdoc.rdoc_files.include('README*')
-  rdoc.rdoc_files.include('lib/**/*.rb')
+  rdoc.main = "README.rdoc"
+  rdoc.rdoc_files.include("README.rdoc", "lib/**/*.rb")
 end

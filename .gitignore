@@ -24,3 +24,6 @@ doc/
 .bundle
 log
 Gemfile.lock
+
+## RBENV
+.ruby-version

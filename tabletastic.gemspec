@@ -23,9 +23,7 @@ Gem::Specification.new do |s|
   s.files = Dir.glob("{bin,lib}/**/*") + %w(LICENSE README.rdoc CHANGELOG.rdoc init.rb)
 
   s.require_path = 'lib'
-  s.required_rubygems_version = ">= 1.3.6"
-  s.add_runtime_dependency('activesupport', '~> 3.0')
+  s.add_runtime_dependency('activesupport', '~> 4.1')
   s.test_files = Dir.glob("spec/**/*_spec.rb") + %w{spec/spec_helper.rb}
   s.add_development_dependency "rspec"
 end
-
